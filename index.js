@@ -3,6 +3,7 @@ const { GatewayIntentBits, Client, Collection, Events } = require("discord.js");
 const fs = require("node:fs");
 const path = require("node:path");
 const { botToken } = require("./config");
+const test = require("./test");
 
 function getCommandInteractions() {
   let commands = [];
@@ -64,6 +65,7 @@ function main() {
 
   client.on(Events.InteractionCreate, interactionCreateHandler);
   client.login(botToken);
+  test();
 }
 
 main();

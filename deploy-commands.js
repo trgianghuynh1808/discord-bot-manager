@@ -2,6 +2,7 @@ require("dotenv").config();
 const { REST, Routes } = require("discord.js");
 const fs = require("node:fs");
 const { botToken, clientId } = require("./config");
+const { botService } = require("./services");
 
 function getCommands() {
   let commands = [];
@@ -27,6 +28,8 @@ async function deployCommands(commands) {
       body: commands,
     });
 
+    // *INFO: save deploy info to json data
+    botService.saveDeployInfo();
     console.log(
       `Successfully reloaded ${data.length} application (/) commands.`
     );

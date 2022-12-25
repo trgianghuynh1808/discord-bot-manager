@@ -1,0 +1,14 @@
+
+@startuml Discord Bot Entity Relationship Diagram
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity Bot {
+  * deployedAt: Date
+}
+
+@enduml
