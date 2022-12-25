@@ -5,8 +5,9 @@ const data = new SlashCommandBuilder()
   .setDescription("Provides information about the user.");
 
 async function execute(interaction) {
+  console.log({ interaction: interaction });
   await interaction.reply(
-    `This command was run by ${interaction.user.username}, who joined on ${interaction.member.joinedAt}.`
+    `This command was run by ${interaction?.user?.username}, who joined on ${interaction?.member?.joinedAt}.`
   );
 }
 

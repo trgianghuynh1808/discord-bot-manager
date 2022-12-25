@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "pre-start": "fnm use",
-    "start": "nodemon index.js",
-    "deploy": "node deploy-commands.js"
+    "deploy": "node deploy-commands.js",
+    "dev": "yarn && nodemon index.js --config nodemon.json"
   },
   "keywords": [],
   "author": "",
