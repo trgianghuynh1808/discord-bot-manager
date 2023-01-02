@@ -12,7 +12,6 @@ async function saveDeployInfo() {
 
 async function getDeployInfo() {
   const botData = await jsonHelper.read(dataPath);
-
   return get(botData, "deployedAt", "");
 }
 
